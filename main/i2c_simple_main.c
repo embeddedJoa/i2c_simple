@@ -19,7 +19,7 @@
 #include <stdio.h>
 #include "esp_log.h"
 #include "driver/i2c.h"
-
+#include "LSM9DS1_Registers.h"
 static const char *TAG = "i2c-simple-example";
 
 #define I2C_MASTER_SCL_IO           CONFIG_I2C_MASTER_SCL      /*!< GPIO number used for I2C master clock */
@@ -35,6 +35,7 @@ static const char *TAG = "i2c-simple-example";
 
 #define MPU9250_PWR_MGMT_1_REG_ADDR         0x6B        /*!< Register addresses of the power managment register */
 #define MPU9250_RESET_BIT                   7
+
 
 /**
  * @brief Read a sequence of bytes from a MPU9250 sensor registers
